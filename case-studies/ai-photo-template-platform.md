@@ -65,6 +65,30 @@ The implementation has used:
 - payment-provider APIs,
 - automated tests and CI quality gates.
 
+## Architecture Snapshot
+
+This sanitized view shows the main runtime boundaries without exposing provider secrets, internal endpoints, or customer data.
+
+```mermaid
+flowchart LR
+  U[Customer / Admin] --> W[Next.js Web + API]
+  W --> D[(PostgreSQL)]
+  W --> S[(Private S3-compatible Storage)]
+  W --> P[Payment Adapter]
+  P --> G[Payment Gateway]
+  G --> V[Server-side Verification]
+  V --> D
+
+  D --> Q[Durable Generation Jobs]
+  Q --> B[Background Worker]
+  B --> A[AI Provider Adapter]
+  A --> E[External AI Provider]
+  E --> B
+
+  B --> S
+  B --> D
+```
+
 ## Reliability Patterns
 
 ### 1. Durable generation instead of request-bound generation
