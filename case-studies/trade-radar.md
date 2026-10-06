@@ -59,6 +59,22 @@ The project uses a combination of:
 - encrypted runtime state and checkpoints,
 - structured opportunity records linked back to private raw signals.
 
+## Architecture Snapshot
+
+The pilot architecture below reflects the currently validated collection path and keeps raw evidence, credentials, and source identifiers outside the public portfolio.
+
+```mermaid
+flowchart LR
+  S[Authorized Telegram / Bale Sources] --> C[Read-only Collectors]
+  C --> R[Raw Signal + Provenance]
+  R --> P[Parser / Normalizer]
+  P --> Q[Conservative Quality Gates]
+  Q --> O[Structured Opportunity]
+  O --> T[Private State / Traceability]
+  O --> V[Sanitized Operator Output]
+  A[Scheduled Cloud Runs] --> C
+```
+
 ## Key Challenges
 
 ### 1. Authorized source access
