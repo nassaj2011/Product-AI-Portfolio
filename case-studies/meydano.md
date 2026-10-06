@@ -58,6 +58,34 @@ The production stack includes:
 - online-payment integration,
 - cloud deployment and health-check endpoints.
 
+## Architecture Snapshot
+
+The diagram below is a sanitized high-level view of the production architecture. It intentionally omits credentials, internal identifiers, and proprietary implementation details.
+
+```mermaid
+flowchart LR
+  U[Players / Coaches / Venue Operations] --> W[Next.js Web + API]
+  W --> A[Authentication & Role/Scope Checks]
+  W --> B[Booking & Scheduling]
+  B --> P[Payment Finalization]
+  P --> F[Finance / Ledger / Wallet]
+  W --> M[Media]
+  W --> N[Notifications]
+
+  A --> D[(PostgreSQL)]
+  B --> D
+  P --> D
+  F --> D
+  N --> D
+
+  M --> S[(Private S3-compatible Storage)]
+  P --> G[Payment Provider]
+  N --> X[SMS / Messaging Providers]
+
+  C[Scheduled Operations] --> D
+  H[Health / Readiness] --> D
+```
+
 ## Key Challenges
 
 ### 1. Booking consistency
