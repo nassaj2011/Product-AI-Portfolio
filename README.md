@@ -33,6 +33,15 @@ A Persian/RTL enterprise project-operations system for construction and industri
 
 [View Case Study](case-studies/SAMAP.md)
 
+### Podcaster Studio — Persian-First AI Podcast Creation Platform
+An independent AI-powered podcast studio combining an RTL five-stage creation flow, evidence-aware script writing, one/two-speaker narration, human review, and reliability-focused audio generation.
+
+**My role:** Product and UX direction, AI workflow design, technical implementation coordination, provider/reliability QA, audio quality review, and controlled pilot planning.
+
+**Status:** Private development; local and limited Free Tier validation. No public launch or active checkout claimed.
+
+[View Case Study](case-studies/podcaster-studio.md)
+
 ### AI Photo Template Platform — AI Product, Payments & Durable Generation
 A template-first AI image product with private media, durable generation workers, AI-provider adapters, payment verification, recovery paths, admin QA, and controlled launch gates.
 
