@@ -20,6 +20,16 @@ An AI podcast generator needs to do more than convert text to sound:
 - retries, rate limits, interrupted jobs, and duplicate requests must not silently multiply provider cost;
 - an attractive interface should still be usable in Persian, on both mobile and desktop.
 
+## Approved UI — Desktop and Mobile
+
+These are **real local UI captures** of the product-owner-approved V5 interface (29 October 2026), not generative design mockups. They show the responsive Persian/RTL experience; the screenshots **do not imply a live production deployment**.
+
+| Desktop — approved visual baseline | Mobile — approved visual baseline |
+|:--:|:--:|
+| <img src="../assets/podcaster-studio/desktop-approved.png" alt="Podcaster Studio approved five-stage Persian web UI on desktop" width="620"> | <img src="../assets/podcaster-studio/mobile-approved.png" alt="Podcaster Studio approved mobile Persian web UI, top portion" width="220"> |
+
+[Open desktop screenshot](../assets/podcaster-studio/desktop-approved.png) · [View full-length mobile screenshot](../assets/podcaster-studio/mobile-approved-full.png)
+
 ## Product Experience
 
 The approved interface uses a **responsive five-stage cinematic accordion** with one prominent active stage, compact inactive stages, and visual cues that guide the creation flow. It covers:
